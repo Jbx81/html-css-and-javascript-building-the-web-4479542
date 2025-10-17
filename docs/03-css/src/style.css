@@ -1,4 +1,3 @@
-/* 
 body {
 	font-family: helvetica, arial, sans-serif;
 }
@@ -9,7 +8,7 @@ h1 {
 }
 
 #left-container {
-	left: 0px;
+	 left: 0px;
 }
 
 #right-container {
@@ -36,6 +35,14 @@ h1 {
 	max-width: 150%;
 	max-height: 150%;
 	z-index: 2;
+	animation: slide-in 2s ease-in;
+	transition: width 2s, height 2s, background-color 1s;
+}
+
+.plant:hover {
+	width: 400%;
+	height: 400%;
+	background-color: goldenrod;
 }
 
 .jar-walls {
@@ -84,11 +91,11 @@ h1 {
 }
 
 .jar-glossy-long {
+	position: absolute;
 	width: 3%;
 	height: 20%;
 	border-radius: 2rem;
 	background: #ddfbff;
-	position: absolute;
 	bottom: 20%;
 	left: 5%;
 }
@@ -101,4 +108,14 @@ h1 {
 	position: absolute;
 	bottom: 45%;
 	left: 5%;
-} */
+}
+
+@keyframes slide-in {
+	0% {
+		transform: translateX(-100%);
+	}
+
+	100% {
+		transform: translateX(0);
+	}
+}
